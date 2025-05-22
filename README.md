@@ -17,3 +17,9 @@ Projeto simples de uma lista de tarefas para ajudar na organização do dia a di
 - JavaScript (manipulação do DOM, eventos, Local Storage)
 - Font Awesome (ícones)
 
+## Como usar
+1. Clone este repositório  
+   `git clone <https://github.com/Adrianakellysl/Crud-Tarefas.git>`  
+2. Abra o arquivo `index.html` no navegador  
+3. Comece a adicionar suas tarefas![image](https://github.com/user-attachments/assets/0decf48f-9812-4aef-8764-67d1354df132)
+
