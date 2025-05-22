@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  color: #363636;
+}
+
+body {
+  background: linear-gradient(to right, #808080, #dcdcdc);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1745990653134-2a9fc31fcd5c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDUyfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* aqui está a opacidade */
+  z-index: -1;
+}
+
+.container {
+  background-color: #BC8F8F;
+  width: 31.25rem;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 70px auto 0;
+}
+
+.inicio {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 2rem;
+}
+
+.inicio i {
+  padding: 10px;
+  font-size: 22px;
+  color: #FFFFF0;
+  margin-top: -0.4rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.input-task {
+  border: none;
+  border-radius: 5px;
+  width: 18.75rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-task:focus {
+  border-color: #DAA520;
+  box-shadow: 0 0 8px #DAA520;
+  outline: none;
+}
+
+.button-add-task {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 14px 25px;
+  background-color: #CD5C5C;
+  float: right;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.button-add-task:hover {
+  opacity: 0.9;
+  background-color: #F08080;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.button-add-task:active {
+  opacity: 0.7;
+  color: #fff;
+}
+.list {
+  overflow-y: auto;
+  max-height: 300px;
+  width: 100%;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #a58383;
+}
+.list-task {
+  list-style: none;
+  width: 100%;
+  margin-top: 1.8rem;
+}
+
+.task {
+  background-color: #f2f2f2;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 3.12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.list-task {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.list-task p {
+  flex: 1;
+  word-break: break-word;
+}
+.task:hover {
+  box-shadow: 0 0 8px #DAA520;
+}
+
+.fa-circle-check {
+  color: #006400;
+}
+.fa-pencil {
+  color: #DAA520;
+  padding-right: 20px;
+}
+
+.fa-trash {
+  color: #DC143C;
+}
+
+.task i {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.task:hover i {
+  opacity: 1;
+}
+
+.done {
+  background-color: #69db7c;
+}
+
+.done p {
+  text-decoration: line-through;
+}
+
+@media (width <= 426px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-task {
+    width: 65%;
+  }
+
+  .button-add-task {
+    padding: 12px;
+  }
+
+  .list-task p {
+    margin-left: -2rem;
+  }
+
+  li .fa-pencil {
+    margin-left: -4rem;
+  }
+}
